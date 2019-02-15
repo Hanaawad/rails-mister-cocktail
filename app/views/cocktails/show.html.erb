@@ -1,0 +1,12 @@
+<h1><%= @cocktail.name %></h1>
+
+<% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+
+  <%= link_to dose, method: :delete do %>
+    <i class="far fa-trash-alt"></i>
+  <% end %>
+<% end %>
+
+
